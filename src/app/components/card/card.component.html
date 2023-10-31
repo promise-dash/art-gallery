@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem; margin-bottom: 2rem; cursor: pointer;">
+    <img class="card-img-top" style="height: 17rem;"
+        [src]="'https://www.artic.edu/iiif/2/' + art.image_id + '/full/843,/0/default.jpg'"
+        alt="{{art.thumbnail?.alt_text}}" [routerLink]="'artwork/' + art.id" />
+    <div class="card-body">
+        <h5 class="card-title">{{art.title.substring(0, 22)}}</h5>
+        
+        <button class="btn btn-primary mt-2" (click)="addItemToWishlist(art)">Wishlist</button>
+        <!-- <button *ngIf="currentRoute == ':wishlist'" class="btn btn-primary mt-2" (click)="removeFromWishList(art)">Remove</button> -->
+    </div>
+</div>
