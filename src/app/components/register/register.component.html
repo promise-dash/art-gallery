@@ -1,0 +1,18 @@
+<form style="width: 40%; margin-top: 10%; padding: 25px; margin-left: auto; margin-right: auto; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;" 
+[formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" formControlName="name" aria-describedby="nameHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Register</button>
+    <br>
+    <small style="display: flex; justify-content: center;">Already have an account?<span routerLink="/login" style="margin-left: 5px; cursor: pointer; color: rgb(78, 78, 244);">Login</span></small>
+</form>

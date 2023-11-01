@@ -9,6 +9,8 @@ import { DetailsComponent } from './components/details/details.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { CardComponent } from './components/card/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     DetailsComponent,
     WishlistComponent,
-    CardComponent
+    CardComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

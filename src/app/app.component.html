@@ -1,15 +1,18 @@
-<nav class="navbar bg-dark">
+<nav class="navbar bg-dark" style="padding: 7px 20px;">
   <div class="container-fluid">
-    <a routerLink="/" class="navbar-brand text-white">Home</a>
+    <h3 routerLink="/" class="text-white" style="font-weight: bold; cursor: pointer;">Artify</h3>
     <form class="d-flex" [formGroup]="searchForm">
       <input class="form-control me-2" 
       type="text" 
       placeholder="Search" 
       aria-label="Search" 
       formControlName="searchTerm">
-      <button class="btn btn-primary" type="submit">Search</button>
     </form>
-    <button class="btn btn-primary" routerLink="wishlist">Wishlist</button>
+    
+    <div class="d-flex gap-5 align-items-center">
+      <i style="font-size:22px; cursor: pointer;" class="fa text-white" title="Wishlist"  routerLink="wishlist">&#xf004;</i>
+      <i style="font-size:24px; cursor: pointer;" title="Logout" class="fa text-white" (click)="handleLogout()">&#xf08b;</i>
+    </div>
   </div>
 </nav>
 

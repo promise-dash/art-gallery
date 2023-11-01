@@ -7,6 +7,8 @@ import { Observable, Subject } from 'rxjs';
 })
 export class ApiService {
 
+  isUserLoggedIn = false;
+
   baseUrl = "https://api.artic.edu/api/v1";
 
   searchedSubject = new Subject<string>();
