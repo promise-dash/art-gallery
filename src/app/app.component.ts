@@ -12,10 +12,14 @@ export class AppComponent{
   title = 'artwork';
 
   searchForm: FormGroup;
-  userlogStatus: Boolean;
+  userlogStatus: Boolean = false;
 
   constructor(private fb: FormBuilder, private api: ApiService, private router: Router){
-    this.userlogStatus = api.isUserLoggedIn;
+
+    if(localStorage.getItem('user')){
+      this.userlogStatus = true;
+    }
+    
     this.searchForm = this.fb.group({
       searchTerm: ''
     });

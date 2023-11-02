@@ -21,7 +21,16 @@ export class CardComponent implements OnInit {
 
   addItemToWishlist(art: any): void{
     let wishlistedItems = JSON.parse(localStorage.getItem('wishlistedItems') || '[]');
+
+    for (let i = 0; i < wishlistedItems.length; i++) {
+      if (wishlistedItems[i].id === art.id) {
+        alert("This artwork is already in your wishlist.");
+        return;
+      }
+    }
+    
     wishlistedItems.push(art);
     localStorage.setItem('wishlistedItems', JSON.stringify(wishlistedItems));
+    alert('Artwork added to wishlist');
   }
 }
